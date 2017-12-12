@@ -8,13 +8,25 @@
 // Color system
 //
 
-$indigo:  #6610f2;
-$primary: $indigo;
+$blue:  #BDD6D6;
+$primary: $blue;
+
+$darkestblue: #173042;
+$darkblue: #8ABAC2;
+$beige: #D9CFB5;
+$text: white;
+
+
+
+
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500');
 
-$font-family-base: Merriweather, serif;
+$font-family-base: Saira Extra Condensed;
+$font-family-text: Open Sans;
+

@@ -1,5 +1,47 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-{%- if site.show-style-guide %}
-    <a href="{{ site.baseurl }}{% link style-guide/index.md %}" class="btn">Style Guide</a>
-{%- endif %}
-</nav>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+        <div class="card bg-2">
+                <div class="container nav-tekst ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div aria-label="breadcrumb" role="navigation">
+                                <ol class="breadcrumb bg-none">
+                                    <li class="breadcrumb-item">
+                                        <a href="{{ site.baseurl }}/index.html">
+                                            <img src="{{ site.baseurl }}/images/mega_missant_icoon.png" class="img-fluid logo_size" alt="logo Mega Missant">
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        {{ page.breadcrumbs }}
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            {% assign links = site.data.navigation %}
+                            {% for link in links %}
+                                {% assign class = nil %}
+                                {% if link.url contains page.url %}
+                                    {% assign class = " citroen" %}
+                                {% endif %}
+                        <div class="col-4">
+                            <a href="{{ site.baseurl }}{{ link.url }}">
+                                <img src="{{ site.baseurl }}{{ link.icoon }}" class="img-fluid logo_size" alt="">
+                                {{ link.title }}
+                            </a>
+                        </div>
+                        {% endfor %}
+                        <div class="col-4">
+                                <p>
+                                    social icons
+                                </p>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>© All copyright Mega Missant - <script>var currentYear = new Date().getFullYear();document.write(currentYear);</script> / <a href="{{ site.baseurl }}/verhuurvoorwaarden.html">Verhuurvoorwaarden</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            

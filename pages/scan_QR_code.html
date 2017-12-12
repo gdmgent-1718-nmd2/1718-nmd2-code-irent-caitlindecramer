@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: scan_QR_code
+title: Mega Missant - Scan QR-code
+breadcrumbs: Scan QR-code
+---
+<div class="container">
+    <div class="row justify-content-begin">
+        <div class="col-4">
+            <div id="qrscanner">
+                <input type=text size=16 placeholder="Tracking Code" class=qrcode-text>
+                <label class=qrcode-text-btn>
+                <input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
+                </label> 
+                <input type=button value="Go" disabled>
+            </div>
+        </div>
+    </div>
+</div>
