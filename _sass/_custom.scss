@@ -14,6 +14,10 @@
   height: 100vh;
   position: relative;
 }
+.viewport-100-extra {
+  height: 120vh;
+  position: relative;
+}
 .card {
   background-color: $primary;
   border: none;
@@ -95,7 +99,7 @@
 }
 .reservatie {
   background-color: transparent;
-  border: 3px $white solid;
+  border: 2px $white solid;
   border-radius: 5px;
   color: $white;
   &:hover {
@@ -174,6 +178,10 @@ a:hover {
   .ac-text-positioning {
     top: -25%;
   }
+  .viewport-100-extra {
+    height: 100vh;
+    position: relative;
+  }
 
 }
 
@@ -193,6 +201,10 @@ a:hover {
     }
     .ac-text-positioning {
       margin-top: 32%;
+    }
+    .viewport-100-extra {
+      height: 100vh;
+      position: relative;
     }
   }
 

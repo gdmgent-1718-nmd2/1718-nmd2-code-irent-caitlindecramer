@@ -16,16 +16,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row nav-tekst">
+                    <div class="row footer-tekst">
                             {% assign links = site.data.footer %}
                             {% for link in links %}
                                 {% assign class = nil %}
                                 {% if page.url contains link.url %}
                                     {% assign class = " citroen" %}
                                 {% endif %}
-                        <div class="col-6 col-lg-6 nav-item-footer">
+                        <div class="col-3 col-lg-3 nav-item-footer">
                             <a class="{{ class }}" href="{{ site.baseurl }}{{ link.url }}">
-                                <img src="{{ site.baseurl }}{{ link.icoon }}" class="img-fluid logo_size" alt="">
+                                <img src="{{ site.baseurl }}{{ link.icoon }}" class="img-fluid footer_logo_size" alt="">
                                 <span class="display-none">{{ link.title }}</span>
                             </a>
                         </div>

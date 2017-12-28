@@ -1,3 +1,11 @@
+.footer-tekst a {
+    color: $darkestblue;
+    font-family: $font-family-base;
+    font-size: 1.3em;
+}
+.footer_logo_size {
+    width: 55px;
+}
 .first_wrapper {
     min-height: 100vh;
 }
@@ -6,7 +14,7 @@
     width: 100%;
 }
 .nav-item-footer {
-margin: 0px 0px 10px 0px;
+margin: -18px 0px 20px 0px;
 }
 .nav-item-footer:hover {
     opacity: 0.8;
@@ -31,6 +39,7 @@ margin: 0px 0px 10px 0px;
     color: $darkestblue;
     font-family: $font-family-base;
     font-size: 1.5em;
+    margin-left: -10px;
 }
 .footer-klein {
     color: $darkestblue;
@@ -56,11 +65,14 @@ li.breadcrumb-item.active::before {
 }
 
 .social_icons_size {
-    width: 40px;
+    width: 39px;
 }
 .margin-top-social-icons {
     margin-top: 30px;
 }
+
+
+
 /* Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap */
 
