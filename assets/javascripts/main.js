@@ -43,15 +43,3 @@ function openQRCamera(node) {
 function showQRIntro() {
   return confirm("Use your camera to take a picture of a QR code.");
 }
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About

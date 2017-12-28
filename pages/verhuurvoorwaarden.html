@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: verhuurvoorwaarden
+permalink: verhuurvoorwaarden/
 title: Mega Missant - Verhuurvoorwaarden
 breadcrumbs: Verhuurvoorwaarden
 
@@ -80,7 +80,7 @@ verhuurvoorwaarden:
   - 
     Als Mega Missant er niet blij uitziet, probeert u hem op te vrolijken met goed uitziend grafisch materiaal.
   - 
-    Als u zelf niets probeert met uw code, zal er rook uit Mega Missants oren komen.
+    U moet zelf vanalles proberen met uw code, anders zal er rook uit Mega Missants oren komen.
   - 
     Het is verboden stiekem foto's te maken van Mega Missant ten allen tijde.
 ---
@@ -89,10 +89,10 @@ verhuurvoorwaarden:
         <div class="col-12 col-md-6 col-lg-8">
             <h1>Verhuurvoorwaarden</h1>
             {% assign verhuurvoorwaarden = page.verhuurvoorwaarden %}
-            <ul>
+            <ul class="geen-opsomming">
                 {% for verhuurvoorwaarden in verhuurvoorwaarden %}
                 <li>
-                    {{ verhuurvoorwaarden }}
+                    <i class="fa fa-bolt" aria-hidden="true"></i>{{ verhuurvoorwaarden }}
                 </li>
                 {% endfor %}
             </ul>

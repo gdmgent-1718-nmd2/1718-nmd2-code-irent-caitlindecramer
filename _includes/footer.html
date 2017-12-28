@@ -1,13 +1,12 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-        <div class="card bg-2">
-                <div class="container nav-tekst ">
-                    <div class="row">
+
+                <div class="container">
+                    <div class="row nav-tekst">
                         <div class="col-12">
                             <div aria-label="breadcrumb" role="navigation">
-                                <ol class="breadcrumb bg-none">
+                                <ol class="breadcrumb bg-none breadcrumb-tekst">
                                     <li class="breadcrumb-item">
                                         <a href="{{ site.baseurl }}/index.html">
-                                            <img src="{{ site.baseurl }}/images/mega_missant_icoon.png" class="img-fluid logo_size" alt="logo Mega Missant">
+                                            <img src="{{ site.baseurl }}/images/mega_missant_icoon.png" class="img-fluid logo_size nav-item" alt="logo Mega Missant">
                                         </a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
@@ -17,31 +16,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                            {% assign links = site.data.navigation %}
+                    <div class="row nav-tekst">
+                            {% assign links = site.data.footer %}
                             {% for link in links %}
                                 {% assign class = nil %}
-                                {% if link.url contains page.url %}
+                                {% if page.url contains link.url %}
                                     {% assign class = " citroen" %}
                                 {% endif %}
-                        <div class="col-4">
-                            <a href="{{ site.baseurl }}{{ link.url }}">
+                        <div class="col-6 col-lg-6 nav-item-footer">
+                            <a class="{{ class }}" href="{{ site.baseurl }}{{ link.url }}">
                                 <img src="{{ site.baseurl }}{{ link.icoon }}" class="img-fluid logo_size" alt="">
-                                {{ link.title }}
+                                <span class="display-none">{{ link.title }}</span>
                             </a>
                         </div>
                         {% endfor %}
-                        <div class="col-4">
-                                <p>
-                                    social icons
-                                </p>
-                            </div>
+                        {% if page.url == "/mega-missant-tijd/"  %}
+                            {% assign class_2 = " mm-nav-active" %}
+                            {% endif %}
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <a class="mm-nav {{ class_2 }}" href="{{ site.baseurl }}/mega-missant-tijd">
+                                Mega Missant tijd
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center margin-top-social-icons">
+                            <a class="social_icons" target="#" href="https://www.facebook.com">
+                                <img class="social_icons_size" src="{{ site.baseurl }}/images/facebook.png" alt="facebook logo">
+                            </a>
+                            <a class="social_icons" target="#" href="https://www.instagram.com">
+                                <img class="social_icons_size" src="{{ site.baseurl }}/images/instagram.png" alt="instagram logo">
+                            </a>
+                            <a class="social_icons"target="#" href="https://twitter.com/?lang=nl">
+                                <img class="social_icons_size" src="{{ site.baseurl }}/images/twitter.png" alt="twitter logo">
+                            </a>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            <p>© All copyright Mega Missant - <script>var currentYear = new Date().getFullYear();document.write(currentYear);</script> / <a href="{{ site.baseurl }}/verhuurvoorwaarden.html">Verhuurvoorwaarden</a> </p>
+                        <div class="col-12 footer-klein">
+                            <p>© All copyright Mega Missant - <script>var currentYear = new Date().getFullYear();document.write(currentYear);</script> / <a href="{{ site.baseurl }}/verhuurvoorwaarden" class="nav-item">Verhuurvoorwaarden</a> </p>
                         </div>
                     </div>
                 </div>
-            </div>
-            

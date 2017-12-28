@@ -1,0 +1,35 @@
+.logo_size {
+    width: 60px;
+}
+.nav_img_size {
+    height : 60px;
+}
+.citroen {
+opacity: 0.8;
+font-family: $font-family-base;
+}
+.nav-item:hover {
+    opacity: 0.8;
+}
+.navbar-brand:hover {
+    opacity: 0.8;
+}
+.bg-light {
+    background-color: $nav-bg-1;
+}
+
+
+.mm-nav {
+    border: 3px $darkestblue solid !important;
+    border-radius: 6px;
+    padding: 3px 10px;
+}
+.mm-nav:hover, .mm-nav-active{
+    color: $white !important;
+    text-decoration: none;
+    background-color: $darkestblue;
+}
+.navbar-toggler {
+    padding: 0px;
+    margin: 10px;
+}

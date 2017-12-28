@@ -1,0 +1,89 @@
+.first_wrapper {
+    min-height: 100vh;
+}
+.footer-positioning {
+    bottom: 0;
+    width: 100%;
+}
+.nav-item-footer {
+margin: 0px 0px 10px 0px;
+}
+.nav-item-footer:hover {
+    opacity: 0.8;
+}
+
+.display-none {
+    display: none;
+}
+.bg-footer {
+    background-color: $footer-bg-1 !important;
+}
+.bg-footer-2 {
+    background-color: $footer-bg-2 !important;
+}
+.bg-footer-3 {
+    background-color: $footer-bg-3 !important;
+}
+.breadcrumb-item.active {
+    color: $darkestblue;
+}
+.breadcrumb-tekst {
+    color: $darkestblue;
+    font-family: $font-family-base;
+    font-size: 1.5em;
+}
+.footer-klein {
+    color: $darkestblue;
+    font-family: $font-family-base;
+    font-size: 1em;
+    margin-top: 20px;
+}
+.footer-klein a {
+    color: $darkestblue;
+    font-family: $font-family-base;
+}
+
+li.breadcrumb-item.active::before {
+    color: $darkestblue;
+}
+
+.social_icons {
+    margin-right: 30px;
+    margin-left: 10px;
+        &:hover {
+            opacity: 0.8;
+        }
+}
+
+.social_icons_size {
+    width: 40px;
+}
+.margin-top-social-icons {
+    margin-top: 30px;
+}
+/* Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .display-none {
+        display: inline-block;
+    }
+    .margin-top-social-icons {
+        margin-top: 0px;
+    }
+    }
+    
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        .kolomverdelen {
+            columns: 2;
+            -webkit-column-gap: 1.5em;
+        }
+        .display-none {
+            display: inline-block;
+        }
+        .margin-top-social-icons {
+            margin-top: 0px;
+        }
+    }

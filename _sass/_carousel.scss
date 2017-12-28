@@ -1,0 +1,52 @@
+//------------------------------------------//
+//              Carousel                    //
+//------------------------------------------//
+
+
+.carousell-wrapper{
+    width:100%;
+    overflow-x: hidden;
+    height: auto;
+    overflow-y: hidden;
+}
+.carousell-container{
+    position: relative;
+    width: 180%;
+    left: -40%;
+}
+.carousell-wrapper, .carousel-inner, .carousel-inner img {
+    height: 100%;
+    width: auto;
+}
+.carousell-wrapper ol.carousel-indicators {
+    bottom: 10%;
+}
+.carousell-wrapper ol.carousel-indicators li.active {
+    filter: brightness(1.1);
+    transform: scale(1.5);
+}
+.carousel_foto {
+    height: 30px;
+    width: auto;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .carousel_foto {
+        height: 40px;
+        width: auto;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .carousel_foto {
+        height: 50px;
+        width: auto;
+    }
+}
+

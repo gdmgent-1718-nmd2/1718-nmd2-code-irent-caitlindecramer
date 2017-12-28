@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: over_ons
+permalink: over-ons/
 title: Mega Missant - Over ons
 breadcrumbs: Over ons
 
@@ -8,12 +8,12 @@ over_ons_tekst:
   - 
     title: Over ons
     tekst: Wij zijn het organiserend team achter de reddingsacties van Mega Missant. Wij zorgen ervoor dat Mega Missant op het juiste moment bij jou verschijnt.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/missant/missant_1.jpg"
     order: 1
   - 
     title: Credits
     tekst: Credits kan je verdienen door naar de lessen te komen. Op het einde van de les kan je de QR-code scannen waardoor de credits automatisch aan jou worden toegekend. Deze kan je inruilen voor een reddingsactie van Mega Missant.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/credit_icoontje.png"
     order: 2
   - 
     title: Credits ontvangen
@@ -23,27 +23,27 @@ over_ons_tekst:
         <li>Scan de QR-code</li>
       </ol>
       Per lestijd van 1,5uur krijg je 1 credit.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/missant/missant_2.jpg"
     order: 3
   - 
     title: Credits inwisselen
     tekst: Wanneer je een reddingsactie hebt gepland, worden de credits automatisch van jouw saldo afgehaald. Per kwartier dat je Mega Missant om hulp vraagt, betaal je | plus:1 credit. Elke reddingsactie bedraagt minimaal een kwartier en maximaal 45 min.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/missant/missant_3.jpg"
     order: 4
   - 
     title: Credits terugkrijgen
     tekst: Als je reddingsactie minder lang is dan gepland, kan je van Mega Missant credits terugkrijgen door een QR-code te scannen. Er wordt telkens afgerond op een kwartier.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/missant/missant_4.jpg"
     order: 5
   - 
     title: Afwezigheid Mega Missant
     tekst: Als Mega Missant jou niet kan komen redden wanneer afgesproken, krijg je de opgenomen credits automatisch terug.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/missant/missant_5.jpg"
     order: 6
   - 
     title: Credits verliezen
     tekst: Laat Mega Missant minimaal 2 uur op voorhand weten als je niet naar zijn reddingsactie kan komen. Indien je zelf niet aanwezig bent, verlies je alle opgenomen credits.
-    beeld: http://placeimg.com/640/480/any
+    beeld: "/images/missant/missant_10.jpg"
     order: 7
 ---
 {% assign over_ons_tekst = page.over_ons_tekst | sort: 'order' %}
@@ -55,20 +55,20 @@ over_ons_tekst:
             <div id="deel{{ id_counter }}" class="card {% if bg-class == 0 %} bg-3 {% endif %} {% if bg-class == 2 %} bg-2 {% endif %} {{ bg-class }}">
                 <div class="container">
                     <div class="row viewport-100 align-items-center">
-                        <div class="col-12 col-lg-5">
-                            <img src="{{ ons.beeld }}" class="img-fluid" alt="">
+                        <div class="col-12 col-lg-5 order-2 order-lg-1">
+                            <img src="{{ site.baseurl }}{{ ons.beeld }}" class="img-fluid" alt="mega missant">
                         </div>
-                        <div class="col-12 col-lg-2">
+                        <div class="col-12 col-lg-2 order-3 order-lg-2">
                             <p>  </p>
                         </div>
-                        <div class="col-12 col-lg-5">
+                        <div class="col-12 col-lg-5 order-1 order-lg-3">
                             <h1>{{ ons.title }}</h1>
                             <p>{{ ons.tekst }}</p>
                         </div>
-                        <div class="col-12 col-md-12 col-lg-12 kiwi" >
+                        <div class="col-12 col-md-12 col-lg-12 pijl_position" >
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-2">
+                                    <div class="col-2 col-lg-1">
                                         {% if id_counter == 7 %}
                                         <a href="#deel1">
                                             <img src="{{ site.baseurl }}/images/pijl.png" class="img-fluid pijl pijl-omhoog" alt="pijl">
@@ -88,28 +88,24 @@ over_ons_tekst:
             {% else %}
             <div id="deel{{ id_counter }}" class="card {% if bg-class == 0 %} bg-3 {% endif %} {% if bg-class == 2 %} bg-2 {% endif %} {{ bg-class }}">                    
             <div class="container">
-                    <div class="row  viewport-100 align-items-center">
-                        <div class="container">
-                            <div class="row  ">
-                                <div class="col-12 col-lg-5">
-                                    <h1>{{ ons.title }}</h1>
-                                    <p>{{ ons.tekst }}</p>
-                                </div>
-                                <div class="col-12 col-lg-2">
-                                    <p>  </p>
-                                </div>
-                                <div class="col-12 col-lg-5">
-                                    <img src="{{ ons.beeld }}" class="img-fluid" alt="">
-                                </div>
-                            </div>
+                    <div class="row viewport-100 align-items-center">
+                        <div class="col-12 col-lg-5 order-1 order-lg-1">
+                            <h1>{{ ons.title }}</h1>
+                            <p>{{ ons.tekst }}</p>
                         </div>
-                        <div class="col-12 col-md-12 col-lg-12 kiwi" >
+                        <div class="col-12 col-lg-2 order-3 order-lg-2">
+                            <p>  </p>
+                        </div>
+                        <div class="col-12 col-lg-5 order-2 order-lg-3">
+                            <img src="{{ site.baseurl }}{{ ons.beeld }}" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 pijl_position">
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-2">
+                                    <div class="col-2 col-lg-1">
                                         {% if id_counter == 7 %}
                                         <a href="#deel1">
-                                            <img src="{{ site.baseurl }}/images/pijl.png" class="img-fluid pijl" alt="pijl">
+                                            <img src="{{ site.baseurl }}/images/pijl.png" class="img-fluid pijl pijl-omhoog" alt="pijl">
                                         </a>
                                         {% else %}
                                         <a href="#deel{{ id_counter | plus:1 }}">
@@ -119,7 +115,6 @@ over_ons_tekst:
                                     </div>
                                 </div>
                             </div>
-                        
                         </div>
                     </div>
                 </div>

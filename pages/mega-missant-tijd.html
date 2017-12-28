@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: mega_missant_tijd
+permalink: mega-missant-tijd/
 title: Mega Missant - Mega Missant tijd
 breadcrumbs: Mega Missant tijd
 
@@ -74,7 +74,6 @@ durations:
   minutes: 60
   available: y
 ---
-
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -83,24 +82,24 @@ durations:
                 <input type="radio" id="button-2" name="radio-set" class="sp-selector-2" />
                 <input type="radio" id="button-3" name="radio-set" class="sp-selector-3" />
                 <div class="sp-content">
-                  <div class="sp-parallax-bg"></div>
-                    <ul class="sp-slider clearfix">
+                    <div class="sp-parallax-bg"></div>
+                    <ul class="sp-slider clearfix parallax-tekst">
                         <div class="row">
                             <div class="col-6">
 
-                          <!--
-                          
-                          stap 1
+                        <!--
+                        
+                        stap 1
 
-                          -->
+                        -->
 
-                              <div class="row">
-                                    <div class="col-8">
-                                      <h2>stap 1: Kies de tijd van de reddingsactie </h2>
+                            <div class="row">
+                                    <div class="col-8 parallax-titel">
+                                        <h2>Kies de datum, tijd en duur van je reddingsactie </h2>
                                     </div>
                                 </div>
                                 <!-- dag kiezen -->
-                                <div class="row">
+                                <div class="row parallax-move">
                                     <div class="col-4">
                                         <div id="dayCarouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
                                             <div class="carousel-inner">
@@ -109,23 +108,27 @@ durations:
                                                 {%- if start == 1 %}
                                                 <div class="carousel-item justify-content-center active">
                                                     <h3>{{ day.day }}</h3>
-                                                    <p>{{ day.month }}{{ day.year }}</p>
+                                                    <p>{{ day.month }} {{ day.year }}</p>
                                                 </div>
                                                 {%- else %}
                                                 <div class="carousel-item justify-content-center">
                                                     <h3>{{ day.day }}</h3>
-                                                    <p>{{ day.month }}{{ day.year }}</p>
+                                                    <p>{{ day.month }} {{ day.year }}</p>
                                                 </div>
                                                 {%- endif %}
                                                 {%- assign start = 2 %}
                                                 {%- endfor %}
                                             </div>
                                             <a class="carousel-control-prev" href="#dayCarouselControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="" aria-hidden="true">
+                                                    <img src="{{ site.baseurl }}/images/pijl-links_donker.png" class="img-fluid pijl_carousel pijl_carousel_left" alt="vorige">
+                                                </span>
                                                 <span class="sr-only">Previous</span>
                                             </a>
                                             <a class="carousel-control-next" href="#dayCarouselControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="" aria-hidden="true">
+                                                    <img src="{{ site.baseurl }}/images/pijl-rechts_donker.png" class="img-fluid pijl_carousel pijl_carousel_right" alt="volgende">
+                                                </span>
                                                 <span class="sr-only">Next</span>
                                             </a>
                                         </div>
@@ -133,7 +136,7 @@ durations:
                                 </div>
                                 <!-- tot hier - dag kiezen -->
                                 <!-- uur kiezen -->
-                                <div class="row">
+                                <div class="row parallax-move">
                                     <div class="col-4">
                                         <div id="hourCarouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
                                             <div class="carousel-inner">
@@ -142,10 +145,10 @@ durations:
                                                 {%- if hour.available == 'y' %}
                                                 {%- if hourstart == 1 %}
                                                 <div class="carousel-item justify-content-center active">
-                                                  <div class="col-1">
-                                                  <h3>{{ hour.hour }}</h3>
-                                                  <p>uur</p>
-                                                  </div>
+                                                    <div class="col-1">
+                                                    <h3>{{ hour.hour }}</h3>
+                                                    <p>uur</p>
+                                                    </div>
                                                 </div>
                                                 {%- else %}
                                                 <div class="carousel-item justify-content-center">
@@ -153,18 +156,22 @@ durations:
                                                         <h3>{{ hour.hour }}</h3>
                                                         <p>uur</p>
                                                         </div>
-                                                  </div>
+                                                    </div>
                                                 {%- endif %}
                                                 {%- assign hourstart = 2 %}
                                                 {%- endif %}
                                                 {%- endfor %}
                                             </div>
                                             <a class="carousel-control-prev" href="#hourCarouselControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="" aria-hidden="true">    <!-- carousel-control-prev-icon     de class die ik hier weg heb gehaald zodat het standaard carousel pijltje er niet meer staat-->
+                                                    <img src="{{ site.baseurl }}/images/pijl-links_donker.png" class="img-fluid pijl_carousel pijl_carousel_left" alt="vorige">
+                                                </span>
                                                 <span class="sr-only">Previous</span>
                                             </a>
                                             <a class="carousel-control-next" href="#hourCarouselControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="" aria-hidden="true">
+                                                    <img src="{{ site.baseurl }}/images/pijl-rechts_donker.png" class="img-fluid pijl_carousel pijl_carousel_right" alt="volgende">
+                                                </span>
                                                 <span class="sr-only">Next</span>
                                             </a>
                                         </div>
@@ -172,7 +179,7 @@ durations:
                                 </div>
                                 <!-- tot hier - uur kiezen -->
                                 <!-- duur kiezen -->
-                                <div class="row">
+                                <div class="row parallax-move">
                                     <div class="col-4">
                                         <div id="minutesCarouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
                                             <div class="carousel-inner">
@@ -199,11 +206,15 @@ durations:
                                                 {%- endfor %}
                                             </div>
                                             <a class="carousel-control-prev" href="#minutesCarouselControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="" aria-hidden="true">
+                                                    <img src="{{ site.baseurl }}/images/pijl-links_donker.png" class="img-fluid pijl_carousel pijl_carousel_left" alt="vorige">
+                                                </span>
                                                 <span class="sr-only">Previous</span>
                                             </a>
                                             <a class="carousel-control-next" href="#minutesCarouselControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="" aria-hidden="true">
+                                                    <img src="{{ site.baseurl }}/images/pijl-rechts_donker.png" class="img-fluid pijl_carousel pijl_carousel_right" alt="volgende">
+                                                </span>
                                                 <span class="sr-only">Next</span>
                                             </a>
                                         </div>
@@ -212,41 +223,40 @@ durations:
                                 <!-- tot hier - duur kiezen -->
                                 <div class="row">
                                     <div class="col-12">
-                                        <button class="btn btn-primary shinny btn-parallax" id="stap1"> <div class="shine">Het is Mega Missant Tijd</div></button>
+                                        <button class="btn btn-primary btn-parallax" id="stap1">Het is Mega Missant Tijd</button>
                                     </div>
                                 </div>
                             </div> <!-- col-6 -->
 
                         <!--
                         
-                          stap 2 
+                        stap 2 
                         
                         -->
 
                             <div class="col-6">
                                 <div class="row">
-                                    <div class="col-8">
-                                        <h2>stap 2:<br> Mega Missant komt jouw richting uitgevlogen op </h2>
+                                    <div class="col-8 parallax-titel">
+                                        <h2>Mega Missant komt jouw richting uitgevlogen op </h2>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
-                                        <ul>
-                                            <li> 17 December 2017</li>
-                                            <li> Om 14u </li>
-                                            <li> Voor 15 minuten </li>
+                                    <div class="col-8 col-md-4 col-lg-5">
+                                        <ul class="geen-opsomming">
+                                            <li><i class="fa fa-bolt" aria-hidden="true"></i> 17 December 2017</li>
+                                            <li><i class="fa fa-bolt" aria-hidden="true"></i> Om 14u </li>
+                                            <li><i class="fa fa-bolt" aria-hidden="true"></i> Voor 15 minuten </li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-10 col-md-4">
-                                        <img id="qrcode-img" src="{{ 'assets/images/qrcode.jpg' | relative_url }}" alt="qrcode">
+                                    <div class="col-8 col-md-6 col-lg-3">
+                                        <img class="qr-code"id="qrcode-img" src="{{'/images/qrcode.png' | relative_url }}" alt="qrcode">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-1">
-                                        <a href="{{ 'account' | relative_url }}" class="btn btn-primary shinny"><div class="shine">bekijk jouw reddingsacties</div></a>    
-                                        <button class="btn btn-primary" id="stap2">for testing purposes</button>
+                                    <div class="col-12">
+                                        <a href="{{ 'account' | relative_url }}">
+                                            <button class="btn btn-primary btn-parallax" id="stap1">Bekijk jouw reddingsacties</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div> <!-- col-6 -->

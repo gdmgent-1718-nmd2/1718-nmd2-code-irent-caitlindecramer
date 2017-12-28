@@ -14,7 +14,22 @@ $primary: $blue;
 $darkestblue: #173042;
 $darkblue: #8ABAC2;
 $beige: #D9CFB5;
-$text: white;
+$white: #FFFFFF;
+$text: $white;
+
+$parallax:#F2F0E3;
+
+$grijs: #575756;
+$nav_hover: $grijs;
+
+$lightblue: #DEEAEA;
+$lightbeige: #ECE8DA;
+$lightdarkblue: #C3DCE0;
+$nav-bg-1: $lightblue;
+$footer-bg-1: $lightblue;
+$footer-bg-2: $lightbeige;
+$footer-bg-3: $lightdarkblue;
+
 
 
 
@@ -24,7 +39,7 @@ $text: white;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600');
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500');
 
 $font-family-base: Saira Extra Condensed;

@@ -1,0 +1,20 @@
+  - 
+    title: Superpowers
+    url: /superpowers
+    icoon: "/images/superpowers.png"
+  - 
+    title: Account
+    url: /account
+    icoon: "/images/account.png"
+  # - 
+  #   title: Mega Missant tijd
+  #   url: /mega-missant-tijd
+  #   icoon: "/images/mega-missant.png"
+  - 
+    title: Over ons
+    url: /over-ons
+    icoon: "/images/over_ons.png"
+  - 
+    title: Scan QR-code
+    url: /scan-qr-code
+    icoon: "/images/qr.png"

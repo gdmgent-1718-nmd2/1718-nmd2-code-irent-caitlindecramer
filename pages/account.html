@@ -1,6 +1,123 @@
 ---
-layout: default
-permalink: account
+layout: default-footer-2
+permalink: account/
 title: Mega Missant - Account
 breadcrumbs: Account
+
+account_user_information:
+  - 
+    naam: Caitlin Decramer
+    ingeschreven: 2016
+    afstudeerrichting: CMO
+    verzameld: 24
+    gespendeerd: 3
+    saldo: 21
 ---
+{% assign account_user_information = page.account_user_information %}
+    {% for account in account_user_information %}
+<div class="card" id="volgende_begin">
+    <div class="container">
+        <div class="row viewport-100 align-items-center">
+            <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
+                <img src="{{ site.baseurl }}/images/account-foto.jpg" class="img-fluid account-foto" alt="Mega Missant">
+            </div>
+            <div class="col-12 col-md-12 col-lg-8 ac-text-positioning">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 text-md-right text-lg-right ac-margin-left">
+                            <h1>
+                                Mijn account
+                            </h1>
+                            <p>
+                                Naam: <span class="bold">{{ account.naam }}</span>
+                                <br>
+                                Ingeschreven sinds <span class="bold">{{ account.ingeschreven }}</span>
+                                <br>
+                                Afstudeerrichting: <span class="bold">{{ account.afstudeerrichting }}</span>
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 text-md-left text-lg-left ac-margin-left">
+                            <h1>
+                                Mijn credits
+                            </h1>
+                            <p>
+                                Totaal verzameld: <span class="bold">{{ account.verzameld }}</span>
+                                <br>
+                                Al gespendeerd: <span class="bold">{{ account.gespendeerd }}</span>
+                                <br>
+                                Saldo: <span class="bold">{{ account.saldo }}</span>
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <a href="{{ 'scan-qr-code' | relative_url }}">
+                                <button class="btn btn-primary" id="stap1">Scan QR-code voor meer credits</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+            <div class="col-12 col-md-12 col-lg-12 pijl_position" >
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <a href="#volgende">
+                            <img src="{{ site.baseurl }}/images/pijl.png" class="img-fluid pijl" alt="pijl">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card bg-2" id="volgende">
+    <div class="container">
+        <div class="row viewport-100 padding-top">
+            <div class="col-lg-5">
+                <div>
+                    <div>
+                        <h1>Mijn reservatiemomenten</h1>
+                    </div>
+                        <a href="#" class="list-group-item reservatie" data-toggle="collapse" data-target="#sm" data-parent="#menu">
+                            <span class="bold">Datum:</span> 17 oktober 2017
+                            <br>
+                            <span class="bold">Uur:</span> 12u
+                            <br>
+                            <span class="bold">Duur:</span> 15min
+                        </a>
+                    <div id="sm" class="collapse">
+                        <a class="list-group-item reservatie">
+                            <img class="qr-code"id="qrcode-img" src="{{'/images/qrcode.png' | relative_url }}" alt="qrcode">
+                        </a>
+                    </div>
+                        <a href="#" class="list-group-item reservatie" data-toggle="collapse" data-target="#sl" data-parent="#menu">
+                            <span class="bold">Datum:</span> 20 December 2017
+                            <br>
+                            <span class="bold">Uur:</span> 14u
+                            <br>
+                            <span class="bold">Duur:</span> 30min
+                        </a>
+                    <div id="sl" class="collapse">
+                        <a class="list-group-item reservatie">
+                            <img class="qr-code"id="qrcode-img" src="{{'/images/qrcode.png' | relative_url }}" alt="qrcode">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+
+            </div>
+            <div class="col-lg-5">
+                <img src="{{ site.baseurl }}/images/missant/missant_10.jpg" class="img-fluid" alt="Mega Missant">
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 pijl_position" >
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <a href="#volgende_begin">
+                            <img src="{{ site.baseurl }}/images/pijl.png" class="img-fluid pijl pijl-omhoog" alt="pijl">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

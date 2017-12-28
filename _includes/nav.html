@@ -1,32 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light nav-tekst">
+<nav class="navbar navbar-expand-lg bg-footer nav-tekst">
     <div class="container">
     <!-- websitelogo -->
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="{{ site.baseurl }}{% link pages/index.html %}">
         <img src="{{ site.baseurl }}/images/mega_missant_icoon.png" class="img-fluid logo_size" alt="logo Mega Missant">
     </a>
     
     <!-- hamburger icoon -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span>
+        <img src="{{ site.baseurl }}/images/menu.png" class="img-fluid logo_size" alt="logo Mega Missant">
+    </span>
     </button>
 
     <!-- hoofdnavigatie -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto align-items-center">
-        {% assign links = site.data.navigation %}
-        {% for link in links %}
-            {% assign class = nil %}
-            {% if link.url contains page.url %}
-                {% assign class = " citroen" %}
-            {% endif %}
-            <li class="nav-item{{ class }}">
-                <a class="nav-link{{ class }}" href="{{ site.baseurl }}{{ link.url }}">
-                    <img src="{{ site.baseurl }}{{ link.icoon }}" class="img-fluid logo_size" alt="">
-                    {{ link.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+                    {% assign links = site.data.navigation %}
+                    {% for link in links %}
+                        {% assign class = nil %}
+                        {% if page.url contains link.url %}
+                            {% assign class = " citroen" %}
+                        {% endif %}
+                        <li class="nav-item {{ class }}">
+                            <a class="nav-link{{ class }}" href="{{ site.baseurl }}{{ link.url }}">
+                                <img src="{{ site.baseurl }}{{ link.icoon }}" class="img-fluid nav_img_size" alt="icoontje {{link.title}}">
+                                {{ link.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                        <li>
+                            {% if page.url == "/mega-missant-tijd/"  %}
+                            {% assign class_2 = " mm-nav-active" %}
+                            {% endif %}
+                            <a class="mm-nav {{ class_2 }}" href="{{ site.baseurl }}/mega-missant-tijd">Mega Missant tijd</a>
+                        </li>
+                </ul>
     </div>
     </div>
 </nav>

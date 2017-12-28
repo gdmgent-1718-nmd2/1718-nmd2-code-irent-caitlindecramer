@@ -1,26 +1,27 @@
   # - 
-  #   title: Home
-  #   url: /index.html
-  #   icoon: "/images/mega_missant_icoon.png"
+  #    title: Home
+  #    url: /
+  #    icoon: "/images/mega_missant_icoon.png"
   - 
     title: Superpowers
-    url: /superpowers.html
+    url: /superpowers
     icoon: "/images/superpowers.png"
   - 
     title: Over ons
-    url: /over_ons.html
+    url: /over-ons
     icoon: "/images/over_ons.png"
   # - 
   #   title: Verhuurvoorwaarden
   #   url: /verhuurvoorwaarden.html
   - 
     title: Account
-    url: /account.html
+    url: /account
     icoon: "/images/account.png"
   - 
     title: Scan QR-code
-    url: /scan_QR_code.html
+    url: /scan-qr-code
     icoon: "/images/qr.png"
-  - 
-    title: Mega Missant tijd
-    url: /mega_missant_tijd.html
+  # - 
+  #   title: Mega Missant tijd
+  #   url: /mega-missant-tijd/
+  #   icoon: "/images/mega-missant.png"

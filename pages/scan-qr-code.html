@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: scan-qr-code/
+title: Mega Missant - Scan QR-code
+breadcrumbs: Scan QR-code
+---
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8 margin-top">
+            <h3>
+                Klik op het onderstaande symbooltje om een QR-code te uploaden of te scannen met de camera van je smartphone of tablet.
+            </h3>
+        </div>
+        <div class="col-12">
+            <div id="qrscanner">
+                <!-- <input type=text size=16 placeholder="Tracking Code" class=qrcode-text> -->
+                <label class=qrcode-text-btn>
+                    <input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
+                </label>
+                <!-- <input type=button value="Go" disabled> -->
+            </div>
+        </div>
+    </div>
+</div>

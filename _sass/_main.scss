@@ -1,5 +1,9 @@
 @import
 "bootstrap-variables",                  // See _bootstrap-variables.scss
 "../_vendor/bootstrap/scss/bootstrap";  // See _vendor/bootstrap/scss/bootstrap.scss
-@import "nav";
 @import "custom";
+@import "nav";
+@import "footer";
+@import "parallax";
+@import "carousel";
+@import "qr-code-scannen";
